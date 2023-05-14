@@ -3,8 +3,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 import * as Table from "cli-table3"
 
-tinify.key = "KEY";
-
+tinify.key = process.env['API_KEY'];
 const compressImages = (dir: string, table?: Table) => {
   fs.readdirSync(dir).forEach((file) => {
     const fullPath = path.join(dir, file);

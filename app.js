@@ -4,9 +4,7 @@ var tinify_1 = require("tinify");
 var fs = require("fs");
 var path = require("path");
 var Table = require("cli-table3");
-// Задаем API ключ Tinify API
 tinify_1.default.key = "3PGhpC1sZXGlBGpT3LEDzVCVn6iQyyAu";
-// Функция, которая обрабатывает все изображения в текущей директории и вызывает себя для всех поддиректорий
 var compressImages = function (dir, table) {
     fs.readdirSync(dir).forEach(function (file) {
         var fullPath = path.join(dir, file);
@@ -16,7 +14,6 @@ var compressImages = function (dir, table) {
         else if (path.extname(fullPath).toLowerCase() === ".png" ||
             path.extname(fullPath).toLowerCase() === ".jpg" ||
             path.extname(fullPath).toLowerCase() === ".jpeg") {
-            // Если файл является изображением, сжимаем его и сохраняем сжатую версию в отдельный файл
             var imageDir = path.dirname(fullPath);
             var compressedDir = path.join(imageDir, "compressed");
             if (!fs.existsSync(compressedDir)) {
@@ -48,6 +45,5 @@ var compressImages = function (dir, table) {
         }
     });
 };
-// Получаем путь к файлу изображения или папке с изображениями
 var inputPath = process.argv[2];
 compressImages(inputPath);
