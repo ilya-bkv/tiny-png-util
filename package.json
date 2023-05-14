@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "cli-table3": "^0.6.3",
+    "dotenv": "^16.0.3",
+    "pretty-bytes": "^6.1.0",
     "tinify": "^1.7.1"
   },
   "devDependencies": {
