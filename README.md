@@ -1,10 +1,6 @@
-Compile  
+
+To compress images, run the command in the project directory
 
 ```bash
-npm run compile
-```
-
-Convert images
-```bash
-npm run tinyfy ./image_directory
+npm run tinyfy ./image_directory_path
 ```
