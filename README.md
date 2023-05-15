@@ -1,9 +1,10 @@
-Compile 
+Compile  
 
 ```bash
-tsc app.ts
+npm run compile
 ```
-convert single image
-```
-node app.js path/to/image.jpg
+
+Convert images
+```bash
+npm run tinyfy ./image_directory
 ```
